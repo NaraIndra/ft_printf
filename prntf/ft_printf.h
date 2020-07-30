@@ -315,13 +315,13 @@ int						check_args(t_buf_struct *buf_s);
 **lib
 */
 int						count_base(ULL val, U_CHAR base);
-long long				ft_atol(const U_CHAR *str);
-size_t					ft_strlen(const U_CHAR *s);
+long long				ft_atol_pf(const U_CHAR *str);
+size_t					ft_strlen_pf(const U_CHAR *s);
 void					ft_ltoa_base(t_buf_struct *buf_s, uintmax_t value,
 		U_CHAR base);
 void					ft_normal_ltoa(U_CHAR *buf, ULL value);
 U_CHAR					*ft_strndup(const U_CHAR *src, size_t len);
-U_CHAR					*ft_strchr(const U_CHAR *s, int c);
+U_CHAR					*ft_strchr_pf(const U_CHAR *s, int c);
 void					*ft_memcpy(void *dst, const void *src, size_t n);
 void					ft_putchar(char c);
 ULL						ft_pow(ULL base, int exponent);
@@ -460,8 +460,8 @@ void					adjust_utf_width(t_buf_struct *buf_s);
 /*
 **print_func
 */
-int						ft_checkbit(LL n, int pos);
-void					ft_printbits(ULL n, int count);
+int						ft_checkbit_pf(LL n, int pos);
+void					ft_printbits_pf(ULL n, int count);
 void					print_and_clear(t_buf_struct *buf_s);
 void					print_sign(void);
 void					print_bytes(t_def_num *ld);

@@ -19,16 +19,16 @@ void		print_and_clear(t_buf_struct *buf_s)
 	buf_s->size = 0;
 }
 
-int			ft_checkbit(long long n, int pos)
+int			ft_checkbit_pf(long long n, int pos)
 {
 	return ((n & (1UL << pos)) != 0);
 }
 
-void		ft_printbits(ULL n, int count)
+void		ft_printbits_pf(ULL n, int count)
 {
 	while (count--)
 	{
-		ft_putchar(ft_checkbit(n, count) + '0');
+		ft_putchar(ft_checkbit_pf(n, count) + '0');
 		if (!(count % 4 && count))
 			ft_putchar(' ');
 	}
@@ -41,5 +41,5 @@ void		print_bytes(t_def_num *ld)
 
 	i = 15;
 	while (i >= 0)
-		ft_printbits(ld->point.bytes[i--], 8);
+		ft_printbits_pf(ld->point.bytes[i--], 8);
 }

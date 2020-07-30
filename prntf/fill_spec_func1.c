@@ -83,7 +83,7 @@ size_t		fill_params(U_CHAR **str, t_arg_opt *opt, size_t arg_pos)
 	else
 	{
 		++(*str);
-		tmp_pos = (size_t)(ft_atol(tmp));
+		tmp_pos = (size_t)(ft_atol_pf(tmp));
 		opt[arg_pos].param_active = 1;
 		opt[arg_pos].param_num = tmp_pos;
 		return (tmp_pos);

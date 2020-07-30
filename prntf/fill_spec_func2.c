@@ -56,7 +56,7 @@ void				fill_width(U_CHAR **str, t_arg_opt *opt, size_t pos,
 	}
 	else
 	{
-		opt[pos].width = ft_atol(*str);
+		opt[pos].width = ft_atol_pf(*str);
 		while (**str >= '0' && **str <= '9')
 			++(*str);
 	}
@@ -78,7 +78,7 @@ void				fill_precision(U_CHAR **str, t_arg_opt *opt,
 		if (**str == '*')
 			opt[arg_pos].prec = va_arg(*ap, int);
 		else
-			opt[arg_pos].prec = ft_atol(*str);
+			opt[arg_pos].prec = ft_atol_pf(*str);
 		while (**str >= '0' && **str <= '9')
 			++(*str);
 		if (opt[arg_pos].prec <= 0 && (is_integer(opt[arg_pos].type) ||

@@ -12,8 +12,8 @@ $(NAME): $(OBJ)
 	ar rc  $@ $^
 	ranlib $@
 
-%.o : $(SRC_PATH)%.c
-	gcc -c $^ -I ./prntf $(CFLAGS) -g 
+%.o : %.c
+	gcc -c $^ -I ./prntf $(CFLAGS)  -o $@ -g
 
 clean:
 	rm -rf $(OBJ) 

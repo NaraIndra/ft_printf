@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-long long		ft_atol(const U_CHAR *str)
+long long		ft_atol_pf(const U_CHAR *str)
 {
 	long long	num;
 	char		sign;
@@ -53,7 +53,7 @@ void			*ft_memcpy(void *dst, const void *src, size_t n)
 	return (tmp);
 }
 
-size_t			ft_strlen(const U_CHAR *s)
+size_t			ft_strlen_pf(const U_CHAR *s)
 {
 	const U_CHAR	*tmp;
 
@@ -63,13 +63,13 @@ size_t			ft_strlen(const U_CHAR *s)
 	return (tmp - s - 1);
 }
 
-U_CHAR			*ft_strchr(const U_CHAR *s, int c)
+U_CHAR			*ft_strchr_pf(const U_CHAR *s, int c)
 {
 	U_CHAR ch;
 
 	ch = c;
 	if (ch == 0)
-		return ((U_CHAR*)(s + ft_strlen(s)));
+		return ((U_CHAR*)(s + ft_strlen_pf(s)));
 	if (!s)
 		return (NULL);
 	while (*s && *s != ch)
@@ -82,7 +82,7 @@ U_CHAR			*ft_strndup(const U_CHAR *src, size_t len)
 	U_CHAR	*dest;
 	U_CHAR	*tmp;
 
-	if (!(dest = (U_CHAR*)malloc((ft_strlen(src) + 1) * sizeof(U_CHAR))))
+	if (!(dest = (U_CHAR*)malloc((ft_strlen_pf(src) + 1) * sizeof(U_CHAR))))
 		return (NULL);
 	tmp = dest;
 	while (len-- && (*dest++ = *src++))

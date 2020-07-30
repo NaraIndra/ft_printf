@@ -20,7 +20,7 @@ size_t		count_str_len(t_arg_opt *opt)
 	i = 0;
 	utf_str_size = 0;
 	if (opt->type == 's' && !(opt->mod))
-		return (ft_strlen(opt->str));
+		return (ft_strlen_pf(opt->str));
 	else
 	{
 		while (opt->utf_str[i])
